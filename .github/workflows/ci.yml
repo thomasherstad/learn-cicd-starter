@@ -44,6 +44,7 @@ jobs:
         run: go install honnef.co/go/tools/cmd/staticcheck@latest
 
       - name: Format code
+        shell: bash
         run: test -z $(go fmt ./...)
 
       - name: Lint code
